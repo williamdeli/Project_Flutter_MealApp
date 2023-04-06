@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'meal_app.dart';
+// import 'meal_app.dart';
+import 'categories_screen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -13,7 +14,8 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       title: 'Happy Meals',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: const MealApp(),
+      // home: const MealApp(),
+      home: const CategoriesScreen(),
     );
   }
 }
