@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'meal.dart';
+import 'detail_screen.dart';
 
 class RecipeItem extends StatelessWidget {
   final String id;
@@ -18,13 +19,10 @@ class RecipeItem extends StatelessWidget {
       required this.affordability});
 
   void selectRecipe(BuildContext context) {
-    // Navigator.of(context).pushNamed(
-    //   RecipeScreen.routeName,
-    //   arguments: {
-    //     'id': meal.id,
-    //     'title': meal.title,
-    //   },
-    // );
+    Navigator.of(context).pushNamed(
+      DetailScreen.routeName,
+      arguments: {'id': id, 'title': title},
+    );
   }
 
   String get complexityText {
