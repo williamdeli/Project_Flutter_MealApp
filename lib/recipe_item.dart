@@ -19,10 +19,8 @@ class RecipeItem extends StatelessWidget {
       required this.affordability});
 
   void selectRecipe(BuildContext context) {
-    Navigator.of(context).pushNamed(
-      DetailScreen.routeName,
-      arguments: {'id': id, 'title': title},
-    );
+    Navigator.of(context)
+        .pushNamed(DetailScreen.routeName, arguments: {'id': id});
   }
 
   String get complexityText {
