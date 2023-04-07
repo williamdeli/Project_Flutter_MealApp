@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'recipe_item.dart';
 import 'dummy_data.dart';
 
 class RecipeScreen extends StatelessWidget {
@@ -19,10 +20,17 @@ class RecipeScreen extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(title: Text(categoryTitle)),
         body: ListView.builder(
-          itemBuilder: (context, index) {
-            return Text(filteredMeals[index].title);
-          },
           itemCount: filteredMeals.length,
+          itemBuilder: (context, index) {
+            // return Text(filteredMeals[index].title);
+            return RecipeItem(
+                id: filteredMeals[index].id,
+                title: filteredMeals[index].title,
+                imageUrl: filteredMeals[index].imageUrl,
+                duration: filteredMeals[index].duration,
+                complexity: filteredMeals[index].complexity,
+                affordability: filteredMeals[index].affordability);
+          },
         ));
   }
 }
