@@ -1,4 +1,3 @@
-// up to slide 43
 import 'package:flutter/material.dart';
 import 'categories_screen.dart';
 import 'recipe_screen.dart';
@@ -17,7 +16,6 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       title: 'Happy Meals',
       theme: ThemeData(primarySwatch: Colors.blue),
-      // home: const CategoriesScreen(),
       routes: {
         '/': (context) => const TabsScreen(),
         RecipeScreen.routeName: (context) => const RecipeScreen(),
